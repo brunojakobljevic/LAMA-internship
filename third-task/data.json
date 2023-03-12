@@ -13,6 +13,11 @@
     {
       "id": 3,
       "name": "Babun",
+      "email": "bab@oss.unist.hr"
+    },
+    {
+      "id": 4,
+      "name": "Didun",
       "email": "did@oss.unist.hr"
     }
   ],
