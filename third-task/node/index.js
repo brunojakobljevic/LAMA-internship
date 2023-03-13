@@ -1,6 +1,7 @@
 const app = require('express')();
 const fs = require('fs');
 const bodyparser = require('body-parser');
+const cors = require('cors');
 
 const PORT = 8080;
 
@@ -9,6 +10,8 @@ const posts = data.posts;
 const users = data.users;
 
 app.use(bodyparser.json());
+
+app.use(cors());
 
 app.get('/users', (req, res) => {
     return res.status(200).send(users);
