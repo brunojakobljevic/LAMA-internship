@@ -9,9 +9,9 @@ var data = JSON.parse(fs.readFileSync('./data.json'));
 const posts = data.posts;
 const users = data.users;
 
-app.use(bodyparser.json());
-
 app.use(cors());
+
+app.use(bodyparser.json());
 
 app.get('/users', (req, res) => {
     return res.status(200).send(users);
@@ -25,7 +25,7 @@ app.put('/users/editUser', (req, res) => {
     let id = req.body.id;
     let newName = req.body.name;
     let newEmail = req.body.email;
-    
+
     fs.readFile('./data.json', (err, data) => {
         if(err)
             return res.status(404).send(err);
@@ -37,7 +37,7 @@ app.put('/users/editUser', (req, res) => {
             user.name = newName;
             user.email = newEmail;
             fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
-                return res.status(200).send("New user data set");
+                return res.status(200);
             })
         }
         else
@@ -61,7 +61,7 @@ app.post('/users/addUser', (req, res) => {
 
     try {
         fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
-        res.status(200).send("New user added");
+        res.status(200);
     }
     catch(err)
     {

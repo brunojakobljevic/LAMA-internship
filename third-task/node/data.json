@@ -19,6 +19,16 @@
       "id": 4,
       "name": "Didun",
       "email": "did@oss.unist.hr"
+    },
+    {
+      "id": 5,
+      "name": "ante braha",
+      "email": "braha@gmail.com"
+    },
+    {
+      "id": 6,
+      "name": "korina",
+      "email": "kore@gmail.com"
     }
   ],
   "posts": [

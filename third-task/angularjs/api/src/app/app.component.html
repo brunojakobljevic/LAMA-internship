@@ -1,0 +1,51 @@
+
+<div class="d-grid gap-1 col-6 mx-auto">
+            <button type="button" class="btn-lg btn-dark" data-bs-toggle="modal" data-bs-target="#modalListUsersAndPosts">List users and posts</button>
+            <button type="button" class="btn-lg btn-dark" data-bs-toggle="modal" data-bs-target="#modalEditUser">Edit user</button>
+            <button type="button" class="btn-lg btn-dark" data-bs-toggle="modal" data-bs-target="#modalAddUser">Add user</button>
+</div>
+
+<div class="modal fade" id="modalListUsersAndPosts" tabindex="-1" aria-labelledby="modalListUsersAndPostsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalListUsersAndPostsLabel">Users and posts</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-list-users-and-posts></app-list-users-and-posts>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalEditUser" tabindex="-1" aria-labelledby="modalEditUserLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEditUserLabel">Edit user</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-edit-user></app-edit-user>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalAddUser" tabindex="-1" aria-labelledby="modalAddUserLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalAddUserLabel">Add user</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-add-user></app-add-user>
+        </div>
+      </div>
+    </div>
+</div>
